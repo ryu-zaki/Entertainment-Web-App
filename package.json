@@ -21,8 +21,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js && npm install"
+    "start": "node index.js && npm install",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
