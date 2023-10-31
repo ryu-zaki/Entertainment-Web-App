@@ -20,7 +20,7 @@ export default function IntroPage({setStartPage, setViewOverlay}) {
       <div className='leftP'></div>
       <div className='text-section'>
         <h1>Entertainment Web App</h1>
-        <p>Developed by Jhonwell Espanola.</p>
+        <p>Developed by Jhonwell Española.</p>
         <button onClick={startThePage}>Get Started</button>
       </div>      
     </div>

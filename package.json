@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "npm install"
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
