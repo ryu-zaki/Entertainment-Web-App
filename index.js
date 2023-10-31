@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const PORT = 4000;
 const cors = require('cors');
@@ -77,7 +78,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false }));
 
 app.get('/', (req, res) => {
-  res.sendFile('./build/index.html');
+  res.sendFile(path.join(__dirname, 'build', 'home.html'));
 })
 
 
