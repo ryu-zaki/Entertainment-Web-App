@@ -10,8 +10,6 @@ export default function IntroPage({setStartPage, setViewOverlay}) {
     setViewOverlay(true);
 
     localStorage.setItem("startPage", "true");
-
-
   }
 
   return (
