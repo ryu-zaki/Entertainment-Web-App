@@ -1,11 +1,11 @@
 import React from 'react'
 import MovieTemplate from '../MovieTemplate'
 
-export default function bookMark({isFav, setFavorite, list, setMovieView, setLoginSucc}) {
+export default function bookMark({isFav, setFavorite, list, setMovieView, setLoginSucc, setViewOverlay}) {
 
 
   const bookMarkList = list.map((info, index) => {
-    return <MovieTemplate setMovieView={setMovieView} isFav={isFav} setLoginSucc={setLoginSucc} setFavorite={setFavorite} data={info} key={index}/>
+    return <MovieTemplate setMovieView={setMovieView} setViewOverlay={setViewOverlay} isFav={isFav} setLoginSucc={setLoginSucc} setFavorite={setFavorite} data={info} key={index}/>
   });
 
   return (
