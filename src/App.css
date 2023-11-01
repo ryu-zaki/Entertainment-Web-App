@@ -39,6 +39,7 @@ body .main-wrapper {
     flex-direction: column;
     width: 100%;
     gap: 2em;
+    overflow: hidden;
 }
 
 body .overlay-page {
@@ -46,7 +47,8 @@ body .overlay-page {
     inset: 0;
     background-color: rgba(0,0,0,0.95);
     z-index: 99;
-
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -1085,7 +1087,7 @@ body .card-wrapper .card.active {
 
 .login-error-wrapper .error-card {
     background-color: var(--bgColor);
-    width: 23em;
+    width: auto;
     height: 11em;
 
     display: flex;
@@ -1148,6 +1150,10 @@ body .wrapper > div {
     :root {
         --modalCardWidth: 22em;
 
+    } 
+
+    .login-error-wrapper .error-card {
+        width: 23em;
     }
 
     .log-sign-page {
