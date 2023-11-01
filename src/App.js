@@ -303,7 +303,6 @@ const [movieView, setMovieView] = React.useState("");
 
       
     }
-    
     </>
   )
 }

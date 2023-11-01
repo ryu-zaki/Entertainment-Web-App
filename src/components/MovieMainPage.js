@@ -9,8 +9,13 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 export default function MovieMainPage({movieView, setMovieView, setViewOverlay}) {
 
   React.useEffect(() => {
+
     window.scrollTo(0, 0);
-    setViewOverlay(false)
+    setViewOverlay(false);
+
+    const textCon = document.querySelector('.movie-main-page');
+
+    textCon.classList.add('active');
   }, [])
       
 

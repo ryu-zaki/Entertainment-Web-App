@@ -1908,11 +1908,17 @@ body .movie-main-page .hero-page {
     
     position: absolute;
     bottom: -2em;
-    right: 3em;
+    right: 50%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
-    
+    transition: all 1s;
+    opacity: 0;
+    transition-delay: 1.8s;
+}
 
+.movie-main-page.active .play-btn {
+    right: 3em;
+    opacity: 1;
 }
 
 .movie-main-page .details-section {
@@ -1948,6 +1954,15 @@ body .movie-main-page .movie-desc {
     width: 85%;
     margin-inline: auto;
     position: relative;
+    transform: translateY(-4em);
+    opacity: 0;
+    transition: all 1s;
+    transition-delay: 3.4s;
+}
+
+body .movie-main-page.active .movie-desc {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 body .movie-main-page .movie-desc > * {
@@ -1969,7 +1984,7 @@ body .movie-main-page .movie-desc::before {
     width: 65%;
 }
 
-body .movie-main-page .movie-desc::after {
+body .movie-main-page .movie-overlay .movie-desc::after {
     width: 45%;
     top: 120%;
 }
@@ -2040,7 +2055,14 @@ body .movie-main-page .quality-tag {
 
 @media (min-width: 900px) {
 
+    body .movie-main-page .movie-desc {
+        transition-delay: 1.8s;
+    }
 
+    body .movie-main-page .movie-overlay .movie-desc::after {
+        content: '';
+        opacity: 0;
+    }
 
     body .movie-main-page {
         gap: 0em; 
@@ -2173,7 +2195,7 @@ body .movie-main-page .quality-tag {
 
 @media (min-width: 1200px) {
     .hero-page > .movie-overlay .text-header {
-        width: 30em;
+        width: 35em;
     }
 
     .hero-page > .movie-overlay .inner-text-poster {
@@ -2205,8 +2227,69 @@ body .movie-main-page .quality-tag {
     body .movie-main-page .movie-overlay .movie-desc:after {
         left: 0;
         transform: translateX(0);
-        opacity: 1;
+        opacity: 0;
         background-color: var(--white);
     }
 }
 
+body .inner-text-poster .text-header,
+.inner-text-poster .text-header .categories,
+.inner-text-poster .text-header .ratings, .movie-main-page .details-section {
+    overflow: hidden;
+    position: relative;
+}
+
+body .inner-text-poster .text-header h1 {
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.inner-text-poster .text-header .categories > *,
+.inner-text-poster .text-header .ratings > * {
+    transform: translateY(-100%);
+    transition: all .4s;
+}
+
+
+.movie-main-page.active .inner-text-poster .text-header h1,
+.movie-main-page.active .inner-text-poster .text-header .categories > *,
+.movie-main-page.active .inner-text-poster .text-header .ratings > * {
+    transform: translate(0, 0);
+}
+
+.inner-text-poster .text-header .categories > * {
+    transition-delay: 1s;
+
+}
+
+.inner-text-poster .text-header .ratings > * {
+    transition-delay: 1.4s;
+}
+
+body .movie-main-page .details-section > div {
+    transition: all 1s;
+}
+
+.movie-main-page .details-section > div:nth-child(1) {
+    opacity: 0;
+    transform: translateX(6em);
+    transition-delay: 3.4s;
+} 
+
+.movie-main-page .details-section > div:nth-child(3) {
+    transform: translateX(-6em);
+    opacity: 0;
+    transition-delay: 3.4s;
+} 
+
+.movie-main-page .details-section > div:nth-child(2) {
+    transform: translateY(-180%);
+    transition-delay: 2.4s;
+   
+}
+
+body .movie-main-page.active .details-section > div {
+    
+    transform: translate(0);
+    opacity: 1;
+}
