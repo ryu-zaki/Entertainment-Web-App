@@ -829,8 +829,12 @@ body .card-wrapper .card.active {
 .card .form-section .input-section > p {
     align-self: flex-end;
     font-size: var(--formPara);
-    opacity: .8;
+    opacity: 0;
     cursor: pointer;
+}
+
+.card.login .form-section .input-section > p {
+    font-size: .4em;
 }
 
 .form-section .input-section > div {
