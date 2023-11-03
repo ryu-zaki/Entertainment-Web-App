@@ -1563,7 +1563,7 @@ body .intro-page {
 
     /* Width */
     --triangleWidth: 16em;
-    --triangleHeight: 22em;
+    --triangleHeight: 28em;
 }
 
 body .intro-page .text-section {
@@ -1712,7 +1712,7 @@ body .intro-page .leftP {
 @keyframes triangleAnim {
     to {
         transform: translateY(0) scaleY(1);
-        opacity: .4;
+        opacity: 1;
     }
     
 }
