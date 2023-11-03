@@ -189,7 +189,7 @@ const data = {
             movieLevel: 'PG'
         },
         {
-            imgUrl: 'asia-in-24-days/regular/small.jpg',
+            imgUrl: 'the-tasty-tour/regular/small.jpg',
             title: 'The Tasty Tour',
             year: 2016,
             category: 'TV Series',
