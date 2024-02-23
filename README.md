@@ -26,4 +26,4 @@ Before you start, make sure you have the following requirements:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/entertainment-web-app.git
+   git clone https://github.com/ryu-zaki/entertainment-web-app.git
